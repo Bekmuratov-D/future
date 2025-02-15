@@ -1,0 +1,24 @@
+@use 'reset';
+@use 'variables/global.scss';
+@use 'themes/normal.scss';
+@use 'themes/dark.scss';
+
+
+.app {
+    font: var(--font-m);
+    background: var(--bg-color);
+    color: var(--primary-color);
+    min-height: 100vh;
+    padding: 40px 10px;
+}
+
+.app-container{
+  max-width: 1200px;
+  border-radius: 10px;
+  min-height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  background: var(--inverted-bg-color);
+  padding: 15px;
+}
