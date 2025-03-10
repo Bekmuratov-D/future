@@ -1,32 +1,32 @@
-import { ErrorPage } from "pages/Error"
-import { MainPage } from "pages/MainPage"
-import { SingInPage } from "pages/SingInPage"
-import { RouteProps } from "react-router-dom"
+import { RouteProps } from 'react-router-dom';
+import { MainPage } from 'pages/MainPage';
+import { AboutPage } from 'pages/AboutPage';
+import { NotFoundPage } from 'pages/NotFoundPage';
 
-
-export const enum AppRoutes {
+export enum AppRoutes {
     MAIN = 'main',
-    ERROR = 'error',
-    SING_IN = 'sing-in',
+    ABOUT = 'about',
+    NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',
-    [AppRoutes.ERROR]: '/error',
-    [AppRoutes.SING_IN]: '/sing-in',
-}
+    [AppRoutes.ABOUT]: '/about',
+    // последний
+    [AppRoutes.NOT_FOUND]: '*',
+};
 
 export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.MAIN]: {
         path: RoutePath.main,
-        element: <MainPage />
+        element: <MainPage />,
     },
-    [AppRoutes.ERROR]: {
-        path: RoutePath.error,
-        element: <ErrorPage />
+    [AppRoutes.ABOUT]: {
+        path: RoutePath.about,
+        element: <AboutPage />,
     },
-    [AppRoutes.SING_IN]: {
-        path: RoutePath["sing-in"],
-        element: <SingInPage />
-    }
-}
+    [AppRoutes.NOT_FOUND]: {
+        path: RoutePath.not_found,
+        element: <NotFoundPage />,
+    },
+};

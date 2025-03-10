@@ -1,12 +1,14 @@
-import { SearchForm } from "widgets/SearchForm"
+import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {
-    return (
-      <div>
-        <p>MainPage</p>
-        <SearchForm />
-      </div>
-    )
-}
+    const { t } = useTranslation();
 
-export default MainPage
+    return (
+        <div>
+            {t('Главная страница')}
+        </div>
+    );
+};
+
+export default MainPage;
