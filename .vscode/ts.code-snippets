@@ -1,0 +1,14 @@
+{
+	"Jest Test Boilerplate": {
+	  "scope": "javascript,typescript",
+	  "prefix": "jt",
+	  "body": [
+		"describe('${TM_FILENAME_BASE}', () => {",
+			"test('', () => {",
+			"  expect().toBe();",
+			"});",
+		"});"
+	  ],
+	  "description": "Boilerplate для теста в Jest"
+	}
+}
